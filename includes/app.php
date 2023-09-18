@@ -6,6 +6,7 @@ require __DIR__.'/../vendor/autoload.php';
 use App\Utils\View;
 use \WilliamCosta\DotEnv\Environment;
 use \WilliamCosta\DatabaseManager\Database;
+use \App\Http\Middleware\Queue as MiddlewareQueue;
 
 
 //CARREGA VARIAVEIS DE AMBIENTE
@@ -25,4 +26,17 @@ define('URL', getenv('URL'));
 //DEFINE VALOR PADRAO DAS VARIAVEIS
 View::init([
     'URL' => URL
+]);
+
+//DEFINE O MAPEAMENTO DE MIDDLEWARES 
+MiddlewareQueue::setMap([
+    'maintenance' => \App\Http\Middleware\Maintenance::class,
+    'required-admin-logout' => \App\Http\Middleware\RequireAdminLogout::class,
+    'required-admin-login' => \App\Http\Middleware\RequireAdminLogin::class
+
+]);
+
+//DEFINE O MAPEAMENTO DE MIDDLEWARES PADROES
+MiddlewareQueue::setDefault([
+    'maintenance'
 ]);

@@ -1,16 +1,6 @@
 # LIGA O REWRITE
-
-#RewriteEngine on
+RewriteEngine on
 
 # REGRA DE REWRITE TUDO PARA INDEX
-#RewriteCond %{REQUEST_FILENAME} !-f
-#RewriteRule ^(./)$ ./index.php [QSA,NC]
-
-# Disable directory browsing
-Options -Indexes
-
-# Enable rewrite engine
-RewriteEngine On
-
-# Rewrite all requests to the index.php file for routing
-RewriteRule ^(.*)$ index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ ./index.php [QSA,NC]

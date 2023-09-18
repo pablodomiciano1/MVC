@@ -30,9 +30,8 @@ class Organization{
      *
      * @var string
      */
-    public $description = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, eveniet? 
-    Magnam illo sint quibusdam aut adipisci. Eaque laborum ad, aliquid est porro, sit, earum deleniti 
-    ea odit quibusdam cum impedit!';
+    public $description = 'Somos um site de avaliação de restaurantes da cidade de Guararapes,
+     aqui você pode deixar sua opinião sobre seu restaurante favorito ou sobre algum restaurante que acabou de visitar.';
 }
 
 

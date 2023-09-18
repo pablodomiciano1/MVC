@@ -24,6 +24,6 @@ class About extends Page{
         ]);
 
         //RETORNA A VIEW DA PAGINA
-        return parent::getPage('SOBRE > Engish', $content);
+        return parent::getPage('SOBRE > GPSFOODs', $content);
     }
 }

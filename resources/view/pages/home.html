@@ -1,3 +1,52 @@
-<h1>{{name}}</h1>
-<hr>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{name}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .loja1 {
+            margin-left: auto;
+        }
+        .custom-rounded {
+            display: block;
+            border-radius: 5cm; 
+            max-width: 40%;
+            height: auto;
+            margin-bottom: 30px;
+            margin: 10 auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .custom-rounded + .custom-rounded {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        }
 
+    </style>
+</head>
+<body>
+  
+    <div class="container loja1">
+        <h3>Bim Burguer</h3> 
+        <img src="{{URL}}/resources/img/hamb.png" class="img-fluid custom-rounded">
+    </div>
+    <div class="container">
+        <h3>Montoro Burguers</h3>
+        <img src="{{URL}}/resources/img/hamb2.jpg" class="img-fluid custom-rounded">
+    </div>
+    <div class="container">
+        <h3>Bim Burguer</h3>
+        <img src="{{URL}}/resources/img/hamb3.jpg" class="img-fluid custom-rounded">
+    </div>
+
+    <section id="testimonies">
+
+        {{itens}}
+        
+        {{pagination}}
+    
+    
+    </section>
+</body>
+</html>

@@ -13,7 +13,7 @@ class Testimony extends Page{
      *
      * @return string
      */
-    private static function getTestimonyItems($request,&$obPagination){
+    public static function getTestimonyItems($request,&$obPagination){
     //DEPOIMENTOS
     $itens='';
 

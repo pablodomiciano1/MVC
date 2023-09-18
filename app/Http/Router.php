@@ -209,6 +209,7 @@ class Router {
             
             
             //RETORNA EXECUÇÃO DA FILA DE MIDDLEWARES
+            
             return (new MiddlewareQueue($route['middlewares'],$route['controller'],$args))->next($this->request);
         } catch (Exception $e) {
             return new Response($e->getCode(),$e->getMessage());
@@ -218,6 +219,15 @@ class Router {
 
     public function getCurrentUrl(){
         return $this->url.$this->getUri();
+    }
+
+    public function redirect ($route){
+       //URL 
+       $url = $this->url.$route;
+
+       //EXECUTA REDIRECT
+       header('location: '.$url);
+       exit;
     }
 }
 
